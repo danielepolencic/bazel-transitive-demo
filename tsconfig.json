@@ -1,0 +1,37 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@monorepo/*": ["*", "packages/*"]
+    },
+    "target": "ES2016",
+    "module": "commonjs",
+    "lib": ["es2017"],
+    "jsx": "react",
+    "sourceMap": true,
+    "strict": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "noUncheckedIndexedAccess": true,
+    "preserveConstEnums": true,
+    "allowSyntheticDefaultImports": true,
+    "declaration": true,
+
+    "rootDirs": [
+      ".",
+
+      "./packages",
+      "./bazel-out/host/bin/packages",
+      "./bazel-out/darwin-fastbuild/bin/packages",
+      "./bazel-out/darwin_arm64-fastbuild/bin/packages",
+      "./bazel-out/k8-fastbuild/bin/packages",
+      "./bazel-out/x64_windows-fastbuild/bin/packages",
+      "./bazel-out/darwin-dbg/bin/packages",
+      "./bazel-out/k8-dbg/bin/packages",
+      "./bazel-out/x64_windows-dbg/bin/packages",
+    ]
+  },
+  "exclude": ["bazel-*", "node_modules"]
+}
